@@ -1,0 +1,32 @@
+{
+  "name": "tp-flasher",
+  "version": "0.0.1",
+  "description": "Un-official automatic flasher for TP-Link N600 and N750",
+  "dependencies": {
+    "is-root": "^1.0.0",
+    "minimist": "^1.2.0",
+    "progress-stream": "^1.2.0",
+    "tftp": "^0.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sudomesh/tp-flasher.git"
+  },
+  "keywords": [
+    "tp-link",
+    "tftp",
+    "tftpd",
+    "firmware",
+    "openwrt",
+    "flash",
+    "flasher",
+    "automatic",
+    "script",
+    "router"
+  ],
+  "author": {
+    "name": "Marc Juul",
+    "email": "juul@sudomesh.org"
+  },
+  "license": "GPL-3.0"
+}
