@@ -95,7 +95,7 @@ function flash(firmwareFile, opts, cb) {
     });
     
     
-    server.on('error', function(er) {
+    server.on('error', function(err) {
         // Errors from the main socket 
         // The current transfers are not aborted 
         console.error("Server errorL", err);
