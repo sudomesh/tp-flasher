@@ -37,9 +37,8 @@ function checkForIP(correctIP) {
         addrs = ifaces[iface];
         for(i=0; i < addrs.length; i++) {
             addr = addrs[i];
-
             if(addr.internal || addr.family != 'IPv4') continue;
-            console.log(addr);            
+//            console.log(addr);            
             if(addr.address == correctIP) {
                 return true
             }
@@ -54,6 +53,7 @@ if(!checkForIP(tpIP)) {
     return false;
 }
 
+
 var flasher = new TPFlasher();
 flasher.flash(firmwareFile, {
     ip: tpIP,
@@ -66,3 +66,4 @@ flasher.flash(firmwareFile, {
     }
     console.log("Firmware sent! Now just wait for the router to reboot :)");
 })
+

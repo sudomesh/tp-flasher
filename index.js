@@ -37,7 +37,7 @@ function flash(firmwareFile, opts, cb) {
 
         console.log("Looks like a router connected from IP", req.stats.remoteAddress, "and asked for a firmware file called", req.file);
     
-        if(!argv.nocheck) {
+        if(!opts.nocheck) {
             var m = req.file.match(/^wdr\d{4}/);
             if(!m) {
                 console.error("Error: The name of the requested file indicates that the router you are trying to flash is not one of the compatible routers.")
@@ -95,10 +95,10 @@ function flash(firmwareFile, opts, cb) {
     });
     
     
-    server.on('error', function(er) {
+    server.on('error', function(err) {
         // Errors from the main socket 
         // The current transfers are not aborted 
-        console.error("Server errorL", err);
+        console.error("Server error:", err);
     });
     
     console.log("Starting tftp server on "+opts.ip+" port "+opts.port);
