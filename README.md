@@ -47,7 +47,7 @@ Install git, e.g:
 
 ```
 sudo apt update
-sudo apt install git nodejs-legacy
+sudo apt install git
 ```
 
 Download this program and install pre-requisites:
