@@ -1,3 +1,4 @@
+WARNING: this repo is not maintained and is highly unstable. it is very likely that you will brick your router if you attempt to us it
 
 tp-flasher is used to flash OpenWRT (or derivatives) onto routers that expect a TFTP server. It was written for use with certain TP-Link routers (see below) but if you use the --nocheck and --ip options it could be used for any router that needs a tftp server.
 
@@ -45,7 +46,8 @@ Ensure you have a recent version of [node.js](https://nodejs.org/)
 Install git, e.g:
 
 ```
-sudo apt-get install git
+sudo apt update
+sudo apt install git nodejs-legacy
 ```
 
 Download this program and install pre-requisites:
@@ -63,6 +65,7 @@ Run:
 ```
 sudo ./flasher.js path/to/my_firmware_image.bin
 ```
+
 
 ## Getting the router into flashy mode
 
